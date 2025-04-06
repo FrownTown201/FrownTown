@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frown Town</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+    }
+    header {
+      background-color: #e07a5f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #F5F5DC;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav button {
+      background-color: maroon;
+      color: white;
+      border: none;
+      margin: 0 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover {
+      background-color: #ffe5d9;
+      color: black;
+    }
+    section {
+      padding: 40px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #e07a5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Frown Town</h1>
+    <p>Quick and Affordable Meals</p>
+  </header>
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('menu')">Menu</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Satisfy Your Cravings!</h2>
+    <p>Get ready for the ultimate comfort food experience. Frown Town serves up quick, filling meals that’ll turn your frown upside down.</p>
+    <img src="https://via.placeholder.com/600x300?text=Frown+Town+Delights" alt="Frown Town Dishes" style="width:100%; max-width:600px; margin-top:20px; border-radius:10px;">
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <ul>
+      <li>Ultimate Fried Rice - $45 </li>
+      <li>Pasta - $50</li>
+      <li>Thundercrunch Fried Chicken - $50</li>
+      <li>Funky Burger - $50</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Founded in 2021, Frown Town is a passion project come true. What started as a college thesis became a multinational company
+and global sensation.</p>
+    <img src="https://via.placeholder.com/500x200?text=Our+Journey" alt="About Frown Town" style="width:100%; max-width:500px; margin-top:20px; border-radius:10px;">
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: Frown Town@gmail.com</p>
+    <p>Phone: (09)123456 </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Frown Town. All rights reserved.</p>
+    <p>SAP, 11 ABM A</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
